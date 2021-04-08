@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  frontend:
+    build: ./judit_demo
+    restart: always
+    ports:
+      - 80:3000
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./judit_demo:/src
+      - /src/node_modules
